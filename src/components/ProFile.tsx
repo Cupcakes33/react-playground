@@ -1,22 +1,29 @@
-import { Card, CardBody, CardFooter, CardHeader } from "./Card";
-import Flex from "./Flex";
+import { useState } from "react";
+import Avatar from "./common/Avatar/Avatar";
+import AvatarState from "./common/Avatar/AvatarState";
+import { Card, CardBody, CardFooter } from "./common/Card";
+import Flex from "./common/Flex/Flex";
 
 export default function ProFile() {
+  const [isNew, setIsNew] = useState(false);
   return (
-    <Card size="sm" rounded="lg" className="rounded-3xl">
-      <CardHeader>
-        <Flex direction="col" className="gap-2">
-          <h1>Profile</h1>
-          <p className="text-neutral-400">Yuni</p>
-        </Flex>
-      </CardHeader>
+    <Card size="sm" rounded="lg" className="rounded-3xl bg-neutral-100">
+      <button onClick={() => setIsNew(!isNew)}>on</button>
       <CardBody>
-        <div className="mt-4 text-xl font-bold">Yuni</div>
+        <Flex className="mt-3">
+          <Avatar
+            src="https://yt3.googleusercontent.com/6aLD9HFfsbrYC0ZeIZaKE_lFQVjTGG30J3wja_vCL5TL0QBpokmWKbWjeAj_LJsxz_OQ7jfr=s900-c-k-c0x00ffffff-no-rj"
+            size="2xl"
+          >
+            <AvatarState isNew={isNew} />
+          </Avatar>
+        </Flex>
       </CardBody>
       <CardFooter>
-        <div className="flex justify-between">
-          <div className="text-sm text-neutral-400"></div>
-        </div>
+        <Flex direction="col" className="mt-3">
+          <h1 className="text-2xl font-bold text-primary">Ayatsuno Yuni</h1>
+          <p className="text-mute">아야츠노 유니</p>
+        </Flex>
       </CardFooter>
     </Card>
   );

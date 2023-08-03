@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { CardProps } from "./type";
+import { DEFAULT_CARD_PADDING } from "./constants";
 
 const getSize = (size: CardProps["size"]): string => {
   switch (size) {
@@ -33,7 +34,11 @@ const getCardOption = ({ size, rounded, className }: CardProps): string => {
 
 const Card = ({ children, ...rest }: CardProps) => {
   const options = getCardOption({ ...rest });
-  return <div className={`shadow-md ${options}`}>{children}</div>;
+  return (
+    <div className={`shadow-md ${DEFAULT_CARD_PADDING} ${options}`}>
+      {children}
+    </div>
+  );
 };
 
 export default Card;
