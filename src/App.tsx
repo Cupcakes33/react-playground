@@ -1,7 +1,11 @@
-import "./App.css";
+import ProFile from "./components/ProFile";
 
 function App() {
-  return <div className="w-10 h-10 bg-black"></div>;
+  return (
+    <>
+      <ProFile />
+    </>
+  );
 }
 
 export default App;

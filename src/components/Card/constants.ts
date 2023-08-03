@@ -1,0 +1,3 @@
+const DEFAULT_CARD_PADDING = "px-6 py-4";
+
+export { DEFAULT_CARD_PADDING };
