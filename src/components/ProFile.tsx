@@ -1,21 +1,18 @@
-import { useState } from "react";
 import Avatar from "./common/Avatar/Avatar";
 import AvatarState from "./common/Avatar/AvatarState";
 import { Card, CardBody, CardFooter } from "./common/Card";
 import Flex from "./common/Flex/Flex";
 
 export default function ProFile() {
-  const [isNew, setIsNew] = useState(false);
   return (
     <Card size="sm" rounded="lg" className="rounded-3xl bg-neutral-100">
-      <button onClick={() => setIsNew(!isNew)}>on</button>
       <CardBody>
         <Flex className="mt-3">
           <Avatar
             src="https://yt3.googleusercontent.com/6aLD9HFfsbrYC0ZeIZaKE_lFQVjTGG30J3wja_vCL5TL0QBpokmWKbWjeAj_LJsxz_OQ7jfr=s900-c-k-c0x00ffffff-no-rj"
             size="2xl"
           >
-            <AvatarState isNew={isNew} />
+            <AvatarState isNew={false} />
           </Avatar>
         </Flex>
       </CardBody>

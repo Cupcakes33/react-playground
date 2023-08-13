@@ -1,13 +1,7 @@
-import ProFile from "./components/ProFile";
+import PriceChanger from "./components/PriceChanger";
 
 function App() {
-  return (
-    <>
-      <div className="w-screen h-screen p-10">
-        <ProFile />
-      </div>
-    </>
-  );
+  return <PriceChanger/>;
 }
 
 export default App;
