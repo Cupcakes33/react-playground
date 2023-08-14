@@ -1,7 +1,8 @@
-import PriceChanger from "./components/PriceChanger";
+
+import TaskManageReducer from "./components/TaskManageReducer";
 
 function App() {
-  return <PriceChanger/>;
+  return <TaskManageReducer />;
 }
 
 export default App;

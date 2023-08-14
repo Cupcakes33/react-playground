@@ -2,6 +2,7 @@ import { useEffect } from "react";
 
 type Props<T> = {
   setAction: React.Dispatch<React.SetStateAction<T[]>>;
+
   url: string;
 };
 
