@@ -1,8 +1,11 @@
-
-import TaskManageReducer from "./components/TaskManageReducer";
+import Styled from "./components/styledcomponent";
 
 function App() {
-  return <TaskManageReducer />;
+  return (
+    <>
+      <Styled />
+    </>
+  );
 }
 
 export default App;
